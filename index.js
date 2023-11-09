@@ -8,11 +8,21 @@ var oScore = 0
 function turn(id){
     if(checkWin() == ''){
         if(xTurn == true){
-            document.getElementById(id).innerHTML = 'X'
-            xTurn = false
-        }else{
-            document.getElementById(id).innerHTML = 'O'
-            xTurn = true
+            if(document.getElementById(id).innerHTML == "")
+            {
+                document.getElementById(id).innerHTML = 'X'
+                xTurn = false
+            }
+        }
+
+        else
+        {
+            if(document.getElementById(id).innerHTML == "")
+            {
+                document.getElementById(id).innerHTML = 'O'
+                xTurn = true
+            }
+            
         }
     }
 
@@ -24,6 +34,9 @@ function turn(id){
     {
         oScore++
     }
+
+    //call function to check if all squares r full
+    //if they are, call reset function
 }
 
 
@@ -77,3 +90,6 @@ function reset(){
         cells[k].innerHTML = ''
     }
 }
+
+
+//implelement function to check if all squares r used
