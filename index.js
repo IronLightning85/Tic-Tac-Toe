@@ -8,11 +8,21 @@ var oScore = 0
 function turn(id){
     if(checkWin() == ''){
         if(xTurn == true){
-            document.getElementById(id).innerHTML = 'X'
-            xTurn = false
-        }else{
-            document.getElementById(id).innerHTML = 'O'
-            xTurn = true
+            if(document.getElementById(id).innerHTML == "")
+            {
+                document.getElementById(id).innerHTML = 'X'
+                xTurn = false
+            }
+        }
+
+        else
+        {
+            if(document.getElementById(id).innerHTML == "")
+            {
+                document.getElementById(id).innerHTML = 'O'
+                xTurn = true
+            }
+            
         }
     }
 
