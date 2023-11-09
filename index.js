@@ -3,8 +3,11 @@ let board = [[1,2,3][4,5,6][7,8,9]]//changes to html elements later
 var xTurn = true
 var oTurn = false
 
+var xScore = 0
+var oScore = 0
+
 function turn(){
-    while(checkWin() != 'x' || checkWin() != 'o'){
+    while(checkWin() == 'empty'){
         if(xTurn == true){
             xTurn = false
             oTurn = true
@@ -12,6 +15,11 @@ function turn(){
             oTurn = false
             xTurn = true
         }
+    }
+    if(checkWin() == 'x'){
+        xScore ++
+    }else{
+        oScore ++
     }
 }
 
