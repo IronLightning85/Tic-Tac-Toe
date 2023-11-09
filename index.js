@@ -18,7 +18,9 @@ function turn(){
     }
     if(checkWin() == 'x'){
         xScore ++
-    }else{
+    }
+    else if(checkWin() == 'o')
+    {
         oScore ++
     }
 }
