@@ -1,22 +1,17 @@
 let board = [[document.getElementById("elem1"), document.getElementById("elem2"), document.getElementById("elem3")], [document.getElementById("elem4"), document.getElementById("elem5"), document.getElementById("elem6")], [document.getElementById("elem7"), document.getElementById("elem8"), document.getElementById("elem9")]]
 
 var xTurn = true
-var oTurn = false
 
 var xScore = 0
 var oScore = 0
 
 function turn(id){
     if(checkWin() == ''){
-        console.log("hello")
         if(xTurn == true){
-            console.log(id)
             document.getElementById(id).innerHTML = 'X'
             xTurn = false
-            oTurn = true
         }else{
             document.getElementById(id).innerHTML = 'O'
-            oTurn = false
             xTurn = true
         }
     }
