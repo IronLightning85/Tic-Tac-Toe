@@ -7,32 +7,32 @@
     <title>Tic-Tac-Toe</title>
 </head>
 <body>
-<div class="container">
-<h1>Tic-Tac-Toe</h1>
-<div class="scoreboard">
-    <h4 class="p1">Player 1 Score: </h4>
-    <h4 class="p2">Player 2 Score: </h4>
-</div>
 
-<div class="gameBoard">
-    <div class="cells">
-    <button tag="empty1" id="elem1" class="cell">l</button>
-    <button tag="empty2" id="elem2" class="cell">o</button>
-    <button tag="empty3" id="elem3" class="cell">p</button>
+<div class="container">
+    
+    <div>
+        <h1>Tic-Tac-Toe</h1>
+        <div class="scoreboard">
+            <h4 class="p1">Player X Score: </h4>
+            <h4 class="p2">Player O Score: </h4>
+        </div>
     </div>
-    <div class="cells">
-    <button tag="empty4" id="elem4" class="cell">xc</button>
-    <button tag="empty5" id="elem5" class="cell">v</button>
-    <button tag="empty6" id="elem6" class="cell">ldspv</button>
-    </div>
-    <div class="cells">
-    <button tag="empty7" id="elem7" class="cell">vl</button>
-    <button tag="empty8" id="elem8" class="cell">vl</button>
-    <button tag="empty9" id="elem9" class="cell">vl</button>
-    </div>
+
 </div>
-<button class="restart-btn">Restart</button>  
+<div class="board">
+    <button tag="empty1" id="elem1" class="cell">elem1</button>
+    <button tag="empty2" id="elem2" class="cell">elem2</button>
+    <button tag="empty3" id="elem3" class="cell">elem3</button>
+    <button tag="empty4" id="elem4" class="cell">elem4</button>
+    <button tag="empty5" id="elem5" class="cell">elem5</button>
+    <button tag="empty6" id="elem6" class="cell">elem6</button>
+    <button tag="empty7" id="elem7" class="cell">elem7</button>
+    <button tag="empty8" id="elem8" class="cell">elem8</button>
+    <button tag="empty9" id="elem9" class="cell">elem9</button>
 </div>  
+
+<input type="button" value="Restart" id="restartButton" onclick="restart()" class="restartButton"/>
+
 </body>
 <script src="index.js"></script>
 </html>
