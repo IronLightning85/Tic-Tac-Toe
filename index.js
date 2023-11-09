@@ -41,7 +41,7 @@ function checkWin()
         winner = elem7.tagName;
     }
 
-    //check veticals
+    //check verticals
     if(elem1 == elem4 && elem4 == elem7)
     {
         winner = elem1.tagName;
