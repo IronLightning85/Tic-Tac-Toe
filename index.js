@@ -1,4 +1,17 @@
-let board = [[1,2,3][4,5,6][7,8,9]]//changes to html elements later
+var xTurn = true
+var oTurn = false
+
+function turn(){
+    while(checkWin() != 'x' || checkWin() != 'o'){
+        if(xTurn == true){
+            xTurn = false
+            oTurn = true
+        }else{
+            oTurn = false
+            xTurn = true
+        }
+    }
+}let board = [[1,2,3][4,5,6][7,8,9]]//changes to html elements later
 
 
 function checkWin()
