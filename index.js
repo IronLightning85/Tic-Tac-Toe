@@ -17,11 +17,11 @@ function turn(){
         }
     }
     if(checkWin() == 'x'){
-        xScore ++
+        xScore++
     }
     else if(checkWin() == 'o')
     {
-        oScore ++
+        oScore++
     }
 }
 
