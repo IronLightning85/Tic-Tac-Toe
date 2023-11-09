@@ -20,6 +20,8 @@ function turn(id){
             xTurn = true
         }
     }
+
+    
     if(checkWin() == 'x'){
         xScore++
     }
@@ -80,6 +82,7 @@ function reset(){
             board[i][j].tagName = 'empty'
        }
     }
+
     var cells = document.getElementsByClassName("cell")
     for(var k = 0; k < cells.length; k++){
         cells[k].innerHTML = ''
