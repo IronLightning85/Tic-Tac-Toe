@@ -6,12 +6,16 @@ var oTurn = false
 var xScore = 0
 var oScore = 0
 
-function turn(){
-    while(checkWin() == 'empty'){
+function turn(id){
+    if(checkWin() == 'empty'){
         if(xTurn == true){
+            document.getElementById(id).innerHTML = 'X'
+            document.getElementById(id).tagName ='x'
             xTurn = false
             oTurn = true
         }else{
+            document.getElementById(id).innerHTML = 'O'
+            document.getElementById(id).tagName ='o'
             oTurn = false
             xTurn = true
         }
