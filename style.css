@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+  
+*{
+    font-family: 'Quicksand',  sans-serif;
+    font-weight: 500;
+}
+
+
+.scoreboard h4{
+    padding: 50px;
+    font-size: 35px;
+    border: 1px solid black;
+    display: flex;
+    float: left;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gameBoard{
+    justify-content: center;
+    width: 900px;
+    height: 300px;
+}
+
+.cells{
+    display: flex;
+}
+
+.cell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+}
