@@ -29,6 +29,9 @@ function turn(id){
     {
         oScore++
     }
+
+    //call function to check if all squares r full
+    //if they are, call reset function
 }
 
 
@@ -88,3 +91,6 @@ function reset(){
         cells[k].innerHTML = ''
     }
 }
+
+
+//implelement function to check if all squares r used
