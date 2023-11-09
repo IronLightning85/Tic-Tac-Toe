@@ -1,4 +1,4 @@
-let board = [[document.body.getElementById("elem1"), document.body.getElementById("elem2"), document.body.getElementById("elem3")][document.body.getElementById("elem4"), document.body.getElementById("elem5"), document.body.getElementById("elem6")][document.body.getElementById("elem7"), document.body.getElementById("elem8"), document.body.getElementById("elem9")]]
+let board = [[document.getElementById("elem1"), document.getElementById("elem2"), document.getElementById("elem3")], [document.getElementById("elem4"), document.getElementById("elem5"), document.getElementById("elem6")], [document.getElementById("elem7"), document.getElementById("elem8"), document.getElementById("elem9")]]
 
 var xTurn = true
 var oTurn = false
@@ -68,4 +68,16 @@ function checkWin()
     }
 
     return winner;
+}
+
+function reset(){
+    for(var i = 0; i < board.length; i++){
+        for(var j = 0; j < board[i].length; j++){
+            board[i][j].tagName = 'empty'
+       }
+    }
+    var cells = document.getElementsByClassName("cell")
+    for(var k = 0; k < cells.length; k++){
+        cells[k].innerHTML = ''
+    }
 }
