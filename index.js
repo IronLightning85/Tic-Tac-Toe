@@ -85,6 +85,7 @@ function checkWin()
 
     //check veticals
     else if(board[0][0].innerHTML == board[1][0].innerHTML && board[1][0].innerHTML == board[2][0].innerHTML)
+
     {
         winner = board[0][0].innerHTML;
         if(board[0][0].innerHTML != "")
