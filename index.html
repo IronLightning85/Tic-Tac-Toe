@@ -7,32 +7,34 @@
     <title>Tic-Tac-Toe</title>
 </head>
 <body>
+
 <div class="container">
-<h1>Tic-Tac-Toe</h1>
-<div class="scoreboard">
-    <h4 class="p1">Player 1 Score: </h4>
-    <h4 class="p2">Player 2 Score: </h4>
+    
+    <div>
+        <h1>Tic-Tac-Toe</h1>
+        <div class="scoreboard">
+            <h4 class="p1" id="playerx">Player X Score: 0</h4>
+            <h4 class="p2" id="playero">Player O Score: 0</h4>
+        </div>
+    </div>
+
 </div>
 
-<div class="gameBoard">
-    <div class="cells">
-    <span tag="empty1" id="elem1" class="cell">l</span>
-    <span tag="empty2" id="elem2" class="cell">o</span>
-    <span tag="empty3" id="elem3" class="cell">p</span>
-    </div>
-    <div class="cells">
-    <span tag="empty4" id="elem4" class="cell">xc</span>
-    <span tag="empty5" id="elem5" class="cell">v</span>
-    <span tag="empty6" id="elem6" class="cell">ldspv</span>
-    </div>
-    <div class="cells">
-    <span tag="empty7" id="elem7" class="cell">vl</span>
-    <span tag="empty8" id="elem8" class="cell">vl</span>
-    <span tag="empty9" id="elem9" class="cell">vl</span>
-    </div>
-</div>
-<button class="restart-btn">Restart</button>  
+
+<div class="board">
+    <button tag="empty" id="elem1" class="cell" onclick="turn('elem1')"></button>
+    <button tag="empty" id="elem2" class="cell" onclick="turn('elem2')"></button>
+    <button tag="empty" id="elem3" class="cell" onclick="turn('elem3')"></button>
+    <button tag="empty" id="elem4" class="cell" onclick="turn('elem4')"></button>
+    <button tag="empty" id="elem5" class="cell" onclick="turn('elem5')"></button>
+    <button tag="empty" id="elem6" class="cell" onclick="turn('elem6')"></button>
+    <button tag="empty" id="elem7" class="cell" onclick="turn('elem7')"></button>
+    <button tag="empty" id="elem8" class="cell" onclick="turn('elem8')"></button>
+    <button tag="empty" id="elem9" class="cell" onclick="turn('elem9')"></button>
 </div>  
+
+<button class="restartButton" onclick="reset()">Restart</button>  
+
 </body>
 <script src="index.js"></script>
 </html>
