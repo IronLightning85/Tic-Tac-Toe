@@ -2,8 +2,8 @@ let board = [[document.getElementById("elem1"), document.getElementById("elem2")
 
 var xTurn = true
 
-let xScore = 0
-let oScore = 0
+var xScore = 0
+var oScore = 0
 
 function turn(id){
     if(checkWin() == ''){
@@ -27,23 +27,23 @@ function turn(id){
     }
 
     
-    if(checkWin() == 'x')
+    if(checkWin() == 'X')
     {
-        xScore++
-        document.getElementById("playerx").innerHTML = document.getElementById("playerx").innerHTML = "Player X Score: " + xScore;
+        xScore++;
+        document.getElementById("playerx").innerHTML = "Player X Score: " + xScore;
     }
-    else if(checkWin() == 'o')
+    else if(checkWin() == 'O')
     {
-        oScore++
-        document.getElementById("playero").innerHTML = document.getElementById("playero").innerHTML = "Player O Score: " + oScore;
+        oScore++;
+        document.getElementById("playero").innerHTML = "Player O Score: " + oScore;
     }
 
     //call function to check if all squares r full
     //if they are, call reset function
-    if(isFull() && checkWin() != "x" && checkWin() != "0")
+    else if(isFull() && checkWin() == '')
     {
         alert("Board Full. No Winner. Resetting Board");
-        reset();
+        reset(false);
     }
 }
 
@@ -141,7 +141,7 @@ function checkWin()
     return winner;
 }
 
-function reset(){
+function reset(fullReset){
     var cells = document.getElementsByClassName("cell")
     for(var k = 0; k < cells.length; k++){
         cells[k].innerHTML = ''
@@ -157,6 +157,16 @@ function reset(){
     board[2][0].style.backgroundColor = "#F5F5F5"
     board[2][1].style.backgroundColor = "#F5F5F5"
     board[2][2].style.backgroundColor = "#F5F5F5"
+
+    xTurn = true;//resets xtrun so x always goes first
+
+    if(fullReset == true)
+    {
+        oScore = 0;
+        xScore = 0;
+        document.getElementById("playerx").innerHTML = "Player X Score: " + xScore;
+        document.getElementById("playero").innerHTML = "Player O Score: " + oScore;
+    }
 }
 
 
@@ -165,7 +175,7 @@ function isFull()
 {
     for(let i = 0; i < board.length; i++)
     {
-        for(let j = 0; j < board[i].length; j++)//iterates throug board. if sn empty square is found, return false. if not. return true after iterations
+        for(let j = 0; j < board[i].length; j++)//iterates through board. if an empty square is found, return false. if not. return true after iterations
             if(board[i][j].innerHTML == "")
             {
                 return false;
